@@ -4,4 +4,4 @@ Bocchi is in the process of learning to create a basic RPC server for her Kessok
 
 ![bocchi_the_rock](Bocchi-The-Rock.jpg)
 
-[Writeup](https://woanmeo11.hashnode.dev/writeup-bocchi-the-rpc-server)
+[Writeup](https://hitori1403.notion.site/Writeup-Bocchi-The-RPC-Server-59fca4b22cb541ea9f48d0071544c354)
