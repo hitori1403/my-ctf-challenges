@@ -1,0 +1,20 @@
+services:
+  web:
+    build: .
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 8889:80
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: bocchitherock
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    healthcheck:
+      interval: 30s
+      retries: 3
+      test: ["CMD", "healthcheck.sh", "--su-mysql", "--connect", "--innodb_initialized"]
+      timeout: 30s
